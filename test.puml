@@ -1,0 +1,49 @@
+@startuml test
+title Отдельная система мониторинга
+
+'Источники данных
+agent MDM as ob3
+agent 1С_MM as ob2
+agent Vendor_Portal as ob1
+agent 1С_Buying as ob4
+agent 1С_POM as ob5
+agent 1C_Ship_Docs as ob6
+agent TREK as ob7
+agent Litera as ob8
+agent MPT as ob9
+agent RMS as ob10
+agent RT as ob11
+agent AMOHP as ob12
+
+rectangle Prometheus
+rectangle Grafana
+
+ob1 -right-> ob2 
+ob2 -right-> ob3
+ob3 -right-> ob4
+ob4 -right-> ob5
+ob5 -right-> ob6
+ob6 -right-> ob7
+ob7 -right-> ob8
+ob8 -right-> ob9
+ob9 -right-> ob10
+ob10 -right-> ob11
+ob11 -right-> ob12 
+
+ob1 --> Prometheus
+ob2 --> Prometheus
+ob3 --> Prometheus
+ob4 --> Prometheus
+ob5 --> Prometheus
+ob6 --> Prometheus
+ob7 --> Prometheus
+ob8 --> Prometheus
+ob9 --> Prometheus
+ob10 --> Prometheus
+ob11 --> Prometheus
+ob12 --> Prometheus
+
+Prometheus --> Grafana
+
+@enduml
+
