@@ -2,6 +2,7 @@
 title Отдельная система мониторинга
 
 'Источники данных
+agent test as test
 agent MDM as ob3
 agent 1С_MM as ob2
 agent Vendor_Portal as ob1
